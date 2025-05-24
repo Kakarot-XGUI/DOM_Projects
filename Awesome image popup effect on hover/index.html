@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Card Hover UI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen flex justify-center items-center bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
+
+    <div class="crdcon flex flex-col md:flex-row justify-center items-center gap-10">
+        <!-- Coca-Cola Card -->
+        <div class="group card relative flex flex-row items-center justify-between rounded-xl w-[300px] h-[300px] md:w-[600px] md:h-[350px] transition-all duration-500 hover:shadow-2xl bg-opacity-20 backdrop-blur-lg bg-red-500 p-6 overflow-hidden">
+            <div class="content w-1/2 opacity-0 invisible transition-all duration-500 group-hover:opacity-100 group-hover:visible text-white">
+                <h2 class="text-2xl font-bold tracking-wide">Coca-Cola</h2>
+                <p class="text-sm md:text-base opacity-80 leading-relaxed">
+                    Experience the original, bold refreshment that sets the standard for taste.
+                </p>
+                <a href="#" class="block mt-3 px-3 py-2 rounded-full border text-white text-sm font-semibold transition-all duration-300 hover:bg-red-600">Explore More</a>
+            </div>
+            <div class="circle flex items-center justify-center w-1/2 h-full bg-red-600 rounded-xl transition-all duration-500 group-hover:bg-transparent">
+                <img src="cocacola.png" class="product_img w-[130px]  transition-all duration-500 group-hover:scale-125 group-hover:rotate-6">
+            </div>
+        </div>
+
+        <!-- Sprite Card -->
+        <div class="group card relative flex flex-row items-center justify-between rounded-xl w-[300px] h-[300px] md:w-[600px] md:h-[350px] transition-all duration-500 hover:shadow-2xl bg-opacity-20 backdrop-blur-lg bg-green-500 p-6 overflow-hidden">
+            <div class="content w-1/2 opacity-0 invisible transition-all duration-500 group-hover:opacity-100 group-hover:visible text-white">
+                <h2 class="text-2xl font-bold tracking-wide">Sprite</h2>
+                <p class="text-sm md:text-base opacity-80 leading-relaxed">
+                    Crisp, clear, and invigorating. Sprite’s zesty twist lifts your mood instantly.
+                </p>
+                <a href="#" class="block mt-3 px-3 py-2 rounded-full border text-white text-sm font-semibold transition-all duration-300 hover:bg-green-600">Explore More</a>
+            </div>
+            <div class="circle flex items-center justify-center w-1/2 h-full bg-green-600 rounded-xl transition-all duration-500 group-hover:bg-transparent">
+                <img src="sprite.png" class="product_img w-[130px]  transition-all duration-500 group-hover:scale-125 group-hover:rotate-6">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

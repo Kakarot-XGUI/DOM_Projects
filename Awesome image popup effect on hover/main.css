@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+html, body{
+     height: 100vh;
+}
+
+.card{
+    width: 300px;
+    height: 350px;
+    transition: .5s;
+    transition-delay: .5s;
+}
+
+.card:hover{
+    width: 600px;
+    transition-delay: 0s;
+}
+
+.card .circle{
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card .circle::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--clr);
+    clip-path: circle(120px at center);
+}
+
+.card:hover .circle::before{
+    clip-path: circle(400px at center);
+}
+
+.card  .circle .logo{
+         width: 200px;
+         transition: 0.5s;
+         transition-delay: 0.5s;
+}
+
+.card:hover  .circle .logo{
+    transform: scale(0);
+    transition-delay: 0s;
+}
+
+.content{
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    opacity: 0;
+    transition: .5s;
+    visibility: hidden;
+}
+.card:hover .content{
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .5s;
+}
+
+.content a{
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.card .product_img{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    height: 500px;
+    transition: .5s;
+    transition-delay: 0s;
+}
+
+.card:hover .product_img{
+    left: 72%;
+    transform: translate(-50%, -50%) scale(1);
+    transition-delay: 0.5s;
+}
+
