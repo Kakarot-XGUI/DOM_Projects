@@ -1,0 +1,27 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poetsen+One&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(-135deg, #56ccf2, #2f80ed, #1c66b2);
+}
+
+#newtask, .tasks {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+#newtask input, h1, .taskname{
+    font-family: 'Winky Rough';
+}
+#Push:active{
+ scale: 0.95;
+}
+
+.tasks{
+    justify-content: space-evenly;
+}

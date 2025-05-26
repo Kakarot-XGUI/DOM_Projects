@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>To Do List App</title>
+</head>
+<body class="min-h-screen">
+     
+ 
+    <div class="container  w-[95%]  lg:w-[60%] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]  px-3 py-5 lg:px-20 lg:py-10  bottom-0">
+        <h1 class="text-4xl mb-5 text-center text-white">Add Your Tasks</h1>
+        <div id="newtask" class=" gap-9 bg-white px-20 py-10 rounded-lg relative justify-between flex flex-col sm:flex-row w-full">
+             
+             <input type="text" placeholder="Task to be Done...." class="inp my-5 mx-auto  relative  w-full md:w-[80%]  lg:w-[70%] h-[20px] text-lg border-2 border-[#d1d3d4] p-4 text-black font-medium focus:outline-none focus:ring focus:ring-[#2f80ed]">
+             <button id="Push" class="relative my-auto py-1 rounded-lg bg-[#2f80ed] w-full sm:w-[40%]   lg:w-[20%] lg:h-full  text-white font-bold text-xl">Add</button>
+        </div>
+        <div class="tasks bg-white px-10 py-10 my-5 rounded-lg w-full relative ">
+  
+        </div>
+      </div>
+  
+  
+    <script src="script.js"></script>
+</body>
+</html>
+
+
