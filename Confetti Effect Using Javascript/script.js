@@ -1,46 +1,31 @@
-function getRandomColor(){
-    const colors = [
-        "#ff5252",
-        "#ffeb3b",
-        "#4caf50",
-        "#03a9f4",
-        "#ff9800",
-        "#e91e63",
-        "#ffffff",
-    ];
-    return colors[Math.floor(Math.random() * colors.length)];
-}
+function createImageBurst(x, y, imageSrc) {
+    const fragmentCount = 50; // Number of pieces
+    const radius = 400; // Spread radius
 
-function createConfetti(x,y){
-    const confettiCount = 100;
-    const radius = 200;
-    for(let i = 0; i<confettiCount; i++){
-        const angle = (2 * Math.PI * i) / confettiCount;
+    for (let i = 0; i < fragmentCount; i++) {
+        const angle = (2 * Math.PI * i) / fragmentCount;
         const xDirection = Math.cos(angle) * radius;
         const yDirection = Math.sin(angle) * radius;
 
-        const confetti = document.createElement("div");
-        confetti.classList.add("confetti");
+        const fragment = document.createElement("img");
+        fragment.src = imageSrc;
+        fragment.classList.add("image-fragment");
 
-        confetti.style.width = `${Math.random() * 6 + 4}px`;
-        confetti.style.height = confetti.style.width;
-        confetti.style.backgroundColor = getRandomColor();
-        confetti.style.top = `${y}px`;
-        confetti.style.left = `${x}px`;
+        fragment.style.width = `${Math.random() * 200 + 10}px`;
+        fragment.style.height = fragment.style.width;
+        fragment.style.top = `${y}px`;
+        fragment.style.left = `${x}px`;
 
-        confetti.style.setProperty("--x",`${xDirection}px`);
-        confetti.style.setProperty("--y",`${yDirection}px`);
+        fragment.style.setProperty("--x", `${xDirection}px`);
+        fragment.style.setProperty("--y", `${yDirection}px`);
 
-        confetti.style.animation = `burst ${Math.random() * 1.5 + 0.15}s ease-out forwards`;
+        fragment.style.animation = `burst ${Math.random() * 1.5 + 0.3}s ease-out forwards`;
 
-        document.body.appendChild(confetti);
-        setTimeout(() => {
-            confetti.remove();
-        }, 3000);
-    } 
+        document.body.appendChild(fragment);
+        setTimeout(() => fragment.remove(), 2000);
+    }
 }
 
-
 document.body.addEventListener("click", (e) => {
-    createConfetti(e.pageX,e.pageY);
-})
+    createImageBurst(e.pageX, e.pageY, "d.png"); // Replace with your image URL
+});
