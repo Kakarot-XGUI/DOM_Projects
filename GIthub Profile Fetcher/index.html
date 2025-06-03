@@ -8,11 +8,7 @@
     <meta name="description" content="Beautiful GitHub Profile Fetcher" />
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts for better typography -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind configuration and custom animations -->
     <script>
       tailwind.config = {
         theme: {
@@ -30,39 +26,32 @@
         }
       }
     </script>
-    
-    <!-- Custom CSS animations and styles -->
     <style>
       /* Floating animation for background elements */
       @keyframes float {
         0%, 100% { transform: translateY(0px); }
         50% { transform: translateY(-20px); }
       }
-      
       /* Glow effect animation */
       @keyframes glow {
         from { box-shadow: 0 0 20px #3b82f6; }
         to { box-shadow: 0 0 30px #3b82f6, 0 0 40px #3b82f6; }
-      }
-      
+      }  
       /* Shimmer effect for loading states */
       @keyframes shimmer {
         0% { background-position: -200px 0; }
         100% { background-position: calc(200px + 100%) 0; }
-      }
-      
+      }      
       /* Loading skeleton background */
       .loading-skeleton {
         background: linear-gradient(90deg, rgba(255,255,255,0.1) 25%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.1) 75%);
         background-size: 200px 100%;
         animation: shimmer 1.5s infinite;
       }
-      
       /* Error shake animation */
       .error-shake {
         animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-      }
-      
+      } 
       @keyframes shake {
         10%, 90% { transform: translate3d(-1px, 0, 0); }
         20%, 80% { transform: translate3d(2px, 0, 0); }
@@ -71,7 +60,6 @@
       }
     </style>
   </head>
-
   <body class="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 font-inter">
     <!-- Animated Background -->
     <div class="fixed inset-0 overflow-hidden pointer-events-none">
@@ -156,7 +144,7 @@
                 <h2 id="userName" class="text-3xl md:text-4xl font-bold text-white mb-2">ARk- On</h2>
                 <p id="userLogin" class="text-xl text-blue-300 mb-4">@Arko</p>
                 <p id="userBio" class="text-gray-300 text-lg leading-relaxed mb-6 max-w-2xl">
-                  Full Stack Developer passionate about creating amazing web experiences. Love working with React, Node.js, and modern technologies.
+                  Full Stack Developer passionate about creating amazing web experiences. Love working with React, JavaScript, and modern technologies.
                 </p>
                 
                 <!-- Additional Info -->
@@ -171,13 +159,13 @@
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-6a1 1 0 00-1-1H9a1 1 0 00-1 1v6a1 1 0 01-1 1H4a1 1 0 110-2V4z" clip-rule="evenodd"></path>
                     </svg>
-                    <span>Tech Corp</span>
+                    <span>Tech Corp.</span>
                   </span>
                   <span id="userJoined" class="flex items-center gap-1">
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
                     </svg>
-                    <span>Joined 2018</span>
+                    <span>Joined 2025</span>
                   </span>
                 </div>
                 
@@ -211,7 +199,7 @@
                 <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h12a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8z" clip-rule="evenodd"></path>
               </svg>
               Public Repositories
-              <span id="repoCount" class="text-lg text-gray-400">(6)</span>
+              <span id="repoCount" class="text-lg text-gray-400">(*)</span>
             </h3>
             
             <!-- Repository Grid -->
@@ -264,6 +252,5 @@
 
     <!-- Include our JavaScript file -->
     <script src="script.js"></script>
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
   </body>
 </html>

@@ -1,34 +1,34 @@
 // 1. GLOBAL VARIABLES
-// These variables store data throughout the application
+// These variables store data throughout the app
 let currentUser = null;        // Stores the current user's profile data
 let currentRepos = [];         // Stores the current user's repositories
 // 2. LANGUAGE COLORS MAPPING
 // When we show a repository, we use these colors for the language dot
 const languageColors = {
-  'JavaScript': '#f1e05a',    // Yellow color for JavaScript
-  'TypeScript': '#2b7489',    // Blue color for TypeScript
-  'Python': '#3572A5',        // Blue color for Python
-  'Java': '#b07219',          // Orange color for Java
-  'C++': '#f34b7d',           // Pink color for C++
-  'C': '#555555',             // Gray color for C
-  'C#': '#239120',            // Green color for C#
-  'PHP': '#4F5D95',           // Purple color for PHP
-  'Ruby': '#701516',          // Red color for Ruby
-  'Go': '#00ADD8',            // Cyan color for Go
-  'Rust': '#dea584',          // Orange color for Rust
-  'Swift': '#ffac45',         // Orange color for Swift
-  'Kotlin': '#F18E33',        // Orange color for Kotlin
-  'Dart': '#00B4AB',          // Teal color for Dart
-  'HTML': '#e34c26',          // Red color for HTML
-  'CSS': '#1572B6',           // Blue color for CSS
-  'Vue': '#4FC08D',           // Green color for Vue
-  'React': '#61DAFB',         // Light blue color for React
-  'Angular': '#DD0031',       // Red color for Angular
-  'Node.js': '#339933',       // Green color for Node.js
-  'Shell': '#89e051',         // Green color for Shell
-  'PowerShell': '#012456',    // Dark blue color for PowerShell
-  'Dockerfile': '#384d54',    // Gray color for Dockerfile
-  'default': '#858585'        // Default gray color for unknown languages
+  'JavaScript': '#f1e05a',    
+  'TypeScript': '#2b7489',  
+  'Python': '#3572A5',  
+  'Java': '#b07219',    
+  'C++': '#f34b7d',  
+  'C': '#555555',  
+  'C#': '#239120',   
+  'PHP': '#4F5D95',    
+  'Ruby': '#701516', 
+  'Go': '#00ADD8',  
+  'Rust': '#dea584',    
+  'Swift': '#ffac45',    
+  'Kotlin': '#F18E33',    
+  'Dart': '#00B4AB',  
+  'HTML': '#e34c26', 
+  'CSS': '#1572B6',  
+  'Vue': '#4FC08D',   
+  'React': '#61DAFB',        
+  'Angular': '#DD0031', 
+  'Node.js': '#339933',   
+  'Shell': '#89e051',   
+  'PowerShell': '#012456',     
+  'Dockerfile': '#384d54',  
+  'default': '#858585'  
 };
 // 3. UTILITY FUNCTIONS
 // Function to format large numbers (like 1000 becomes 1k, 1000000 becomes 1M)
@@ -274,13 +274,13 @@ async function searchGitHubUser() {
   try {
     // Step 1: Fetch user profile data
     console.log(`Starting search for user: ${username}`);
-    const user = await fetchGitHubUser(username);
+    const user = await fetchGitHubUser(username);   // line 69 , 82
     currentUser = user;
     // Update the profile UI with user data
     updateProfileUI(user);
     // Step 2: Fetch user's repositories
     setReposLoadingState(true);
-    const repos = await fetchUserRepos(username);
+    const repos = await fetchUserRepos(username);   // line 69 , 82
     currentRepos = repos;
     // Update the repositories UI with repos data
     updateRepositoriesUI(repos);
